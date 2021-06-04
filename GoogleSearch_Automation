@@ -1,0 +1,24 @@
+
+
+package Google_src;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class google_search {
+
+@Test	
+public void googleSearch() throws Exception{
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\user\\Desktop\\chrome_driver\\New\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.google.com/");
+		driver.findElement(By.name("q")).sendKeys("iphone"+ Keys.ENTER);
+		driver.findElement(By.xpath("//input[@class='gNO89b']")).click();	
+}	
+	
+}
